@@ -10,7 +10,11 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Next.js and TypeScript rules
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // Add Prettier config to disable formatting-related ESLint rules
+  ...compat.extends("prettier"),
 ];
 
 export default eslintConfig;
